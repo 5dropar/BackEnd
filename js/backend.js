@@ -6,34 +6,39 @@ var config = {
     projectId: "dropar-e12fb",
     storageBucket: "dropar-e12fb.appspot.com",
     messagingSenderId: "983460445073"
-  };
-  firebase.initializeApp(config);
-  const db = firebase.firestore(); // Reference við firebase.firestore() þannig við þurfum ekki alltaf að segja firebase.firestore().eitthvadmethod heldur getum sagt db.eitthvadmethod
+};
+firebase.initializeApp(config);
+const db = firebase.firestore(); // Reference við firebase.firestore() þannig við þurfum ekki alltaf að segja firebase.firestore().eitthvadmethod heldur getum sagt db.eitthvadmethod
 
 const button = document.getElementById("button");
 
-button.onclick = ()=> {
+button.onclick = () => {
     let currentTitle = document.getElementById("title").value;
     let currentUrl = document.getElementById("img-url").value;
-    let currentRating = parseInt(document.getElementById("rating").value); 
+    let currentRating = parseInt(document.getElementById("rating").value);
     let currentDescription = document.getElementById("description").value;
     let currentDate = new Date()
-    
-    db.collection("images")
-    .doc(currentDate.toString())
-    .set({
-        title: currentTitle,
-        imgUrl: currentUrl,
-        rating: currentRating,
-        description: currentDescription,
-        date: currentDate
+
+    getInfo(currentUrl).then((description) => {
+        db.collection("images")
+            .doc(currentDate.toString())
+            .set({
+                title: currentTitle,
+                imgUrl: currentUrl,
+                rating: currentRating,
+                description: currentDescription,
+                date: currentDate,
+                imgInfo: description
+            })
     })
 }
 
-fetch("http://localhost:3000/api")
-.then(results => results.json())
-.then(json => {
-    console.log(json)
-})
-
+getInfo = (url) => {
+    return fetch("http://localhost:3000/api?img=" + url)
+        .then(results => results.json())
+        .then(json => {
+            console.log(json)
+            return json.description.tags;
+        })
+}
 

@@ -20,7 +20,7 @@ const subscriptionKey = '0a0c9fa84de24370a2363fec68496e32';
 const uriBase =
     'https://westcentralus.api.cognitive.microsoft.com/vision/v2.0/analyze';
 
-const imageUrl =
+let imageUrl =
     'https://www.sciencenews.org/sites/default/files/2018/02/main/articles/022118_EE_horses_feat.jpg';
 
 // Request parameters.
@@ -36,24 +36,28 @@ const options = {
     body: '{"url": ' + '"' + imageUrl + '"}',
     headers: {
         'Content-Type': 'application/json',
-        'Ocp-Apim-Subscription-Key' : subscriptionKey
+        'Ocp-Apim-Subscription-Key': subscriptionKey
     }
 };
 
-request.post(options, (error, response, body) => {
-  if (error) {
-    console.log('Error: ', error);
-    return;
-  }
-  let jsonResponse = JSON.stringify(JSON.parse(body), null, '  ');
-  console.log('JSON Response\n');
-  console.log(jsonResponse);
+app.get("/api", (req, res) => {
+    // res.json(jsonResponse)
+    imageUrl = req.query.img;
+    options.body = '{"url": ' + '"' + imageUrl + '"}';
 
-  app.get("/api", (req,res)=>{
-      res.json(jsonResponse)
-      res.send(req.params)
-  })
-});
+    request.post(options, (error, response, body) => {
+        if (error) {
+            console.log('Error: ', error);
+            return;
+        }
+        let jsonResponse = JSON.parse(body);
+        console.log(options.body)
+        res.json(jsonResponse);
+
+        // console.log('JSON Response\n');
+        // console.log(jsonResponse);
+    });
+})
 
 const port = 3000;
 app.listen(port, () => console.log(`Example app listening on port ${port}!`));
