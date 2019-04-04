@@ -1,3 +1,22 @@
+body {
+  width: 100%; }
 
+.form {
+  padding-top: 2rem;
+  width: 30%;
+  margin: 0 auto; }
+  .form input {
+    width: 100%; }
+  .form select {
+    width: 100%;
+    margin-bottom: 0.5rem; }
+  .form textarea {
+    width: 100%; }
+  .form #button {
+    width: 100%; }
+
+.navbar {
+  display: flex;
+  justify-content: space-between; }
 
 /*# sourceMappingURL=styles.css.map */

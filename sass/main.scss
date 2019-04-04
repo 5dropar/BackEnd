@@ -1,4 +1,27 @@
 body {
-    background-color: red;
-
+  width: 100%;
+}
+.form {
+  padding-top: 2rem;
+  width: 30%;
+  margin: 0 auto;
+  input {
+    width: 100%;
+  }
+  label {
+  }
+  select {
+    width: 100%;
+    margin-bottom: 0.5rem;
+  }
+  textarea {
+    width: 100%;
+  }
+  #button {
+    width: 100%;
+  }
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
 }

@@ -72,12 +72,29 @@ logOutButton.onclick = () => {
   auth.signOut(); // firebase function til að logga út notenda
 };
 
+//Birtum mismunandi content eftir hvort að notandinn er loggaður inn eða ekki
+
+const logInLinks = document.querySelectorAll(".logged-out"); // Ná í alla links sem á að sýna þegar notandinn er loggaðurr inn
+const logOutLinks = document.querySelectorAll(".logged-in"); // Ná í alla links sem á að sýna þegar notandinn er ekki loggaðurr inn
+
 // Þetta function runner alltaf þegar að það er auth change t.d þegar user loggar sig inn eða út eða þegar siða er fyrst oppnuð
 auth.onAuthStateChanged(user => {
   const form = document.querySelector(".form");
   if (user) {
     form.style.visibility = "visible";
+    logInLinks.forEach(logInLink => {
+      logInLink.style.display = "none";
+    });
+    logOutLinks.forEach(logOutLink => {
+      logOutLink.style.display = "block";
+    });
   } else {
     form.style.visibility = "hidden";
+    logOutLinks.forEach(logOutLink => {
+      logOutLink.style.display = "none";
+    });
+    logInLinks.forEach(logInLink => {
+      logInLink.style.display = "block";
+    });
   }
 });
