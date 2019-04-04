@@ -28,7 +28,8 @@ button.onclick = () => {
         rating: currentRating,
         description: currentDescription,
         date: currentDate,
-        imgInfo: description,
+        imgInfo: description.tags,
+        microDescription: description.captions[0],
         userId: userId, // Get the user id of whoever is upploading the image for later reference
         imageId: randomId() // Allar myndir eru með unique id þannig að auðveldara er að ná í eina mynd til þess að vinna með seinna
       });
@@ -61,7 +62,7 @@ getInfo = url => {
     .then(results => results.json())
     .then(json => {
       console.log(json);
-      return json.description.tags;
+      return json.description;
     });
 };
 
