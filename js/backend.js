@@ -106,7 +106,7 @@ auth.onAuthStateChanged(user => {
   const form = document.querySelector(".form");
   if (user) {
     userId = user.uid;
-    form.style.visibility = "visible";
+    form.style.display = "block";
     logInLinks.forEach(logInLink => {
       logInLink.style.display = "none";
     });
@@ -114,7 +114,7 @@ auth.onAuthStateChanged(user => {
       logOutLink.style.display = "block";
     });
   } else {
-    form.style.visibility = "hidden";
+    form.style.display = "none";
     logOutLinks.forEach(logOutLink => {
       logOutLink.style.display = "none";
     });
