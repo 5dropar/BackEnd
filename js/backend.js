@@ -11,7 +11,7 @@ firebase.initializeApp(config);
 const db = firebase.firestore(); // Reference við firebase.firestore() þannig við þurfum ekki alltaf að segja firebase.firestore().eitthvadmethod heldur getum sagt db.eitthvadmethod
 
 const button = document.getElementById("button");
-
+let userId; // Global variable til þess að geta náð í userid utan auth, breyta seinna
 button.onclick = () => {
   let currentTitle = document.getElementById("title").value;
   let currentUrl = document.getElementById("img-url").value;
@@ -28,7 +28,8 @@ button.onclick = () => {
         rating: currentRating,
         description: currentDescription,
         date: currentDate,
-        imgInfo: description
+        imgInfo: description,
+        userId: userId // Get the user id of whoever is upploading the image for later reference
       });
   });
 };
@@ -43,6 +44,7 @@ getInfo = url => {
 };
 
 // Auth stuff
+
 const auth = firebase.auth(); // Reference í firebase.auth() þannig við getum notað methods úr því með að skrifa bara auth.method()
 
 const signUpButton = document.getElementById("signup-button");
@@ -81,6 +83,7 @@ const logOutLinks = document.querySelectorAll(".logged-in"); // Ná í alla link
 auth.onAuthStateChanged(user => {
   const form = document.querySelector(".form");
   if (user) {
+    userId = user.uid;
     form.style.visibility = "visible";
     logInLinks.forEach(logInLink => {
       logInLink.style.display = "none";
