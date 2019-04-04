@@ -105,9 +105,10 @@ const logOutLinks = document.querySelectorAll(".logged-in"); // Ná í alla link
 // Þetta function runner alltaf þegar að það er auth change t.d þegar user loggar sig inn eða út eða þegar siða er fyrst oppnuð
 auth.onAuthStateChanged(user => {
   const form = document.querySelector(".form");
+
   if (user) {
     userId = user.uid;
-    form.style.display = "block";
+
     logInLinks.forEach(logInLink => {
       logInLink.style.display = "none";
     });
