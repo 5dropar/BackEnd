@@ -19,28 +19,50 @@
     <title>Account</title>
   </head>
   <body>
-    <header>
-      <div id="header-container">
-        <nav class="d-flex justify-content-between ">
-          <h4>TheImgDatabase</h4>
-          <!-- <ul class="nav justify-content-end ">
-            <li class="nav-item ">
-              <div id="search-container">
-                <a class="nav-link align-items-center" href="#">
-                  <input id="searchbar" type="text" placeholder="search.." />
-                  <i class="fas fa-search"></i>
-                </a>
-              </div>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#"><i class="fas fa-user"></i></a>
-            </li>
-          </ul> -->
-        </nav>
-      </div>
-    </header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-primary text-white">
+      <a class="navbar-brand" href="#">Navbar</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-    <div class="form" style="display: none;">
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto nav-flex">
+          <li class="nav-item logged-out" style="display:none;">
+            <a
+              class="nav-link"
+              href="#"
+              data-toggle="modal"
+              data-target="#login-modal"
+              >Log in</a
+            >
+          </li>
+          <li class="nav-item logged-out" style="display:none;">
+            <a
+              class="nav-link"
+              href="#"
+              data-toggle="modal"
+              data-target="#signup-modal"
+              >Sign up</a
+            >
+          </li>
+          <li class="nav-item logged-in" style="display:none;">
+            <a class="nav-link" href="#" id="logout-button">Log out</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <button id="signup-btn" data-toggle="modal" data-target="#signup-modal">Sign up</button>
+    <button id="login-btn" data-toggle="modal" data-target="#login-modal">Log in</button>
+    
+    <div class="form" style="visibility: hidden;">
     <label for="title">Title:</label>
     <br>
     <input type="text" id="title" /><br>
@@ -116,8 +138,6 @@
         </div>
       </div>
     </div>
-    <button id="signup-btn" data-toggle="modal" data-target="#signup-modal">Sign up</button>
-    <button id="login-btn" data-toggle="modal" data-target="#login-modal">Log in</button>
 
     <div
       class="modal fade"
@@ -171,6 +191,7 @@
         </div>
      
     </div>
+
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-app.js"></script>

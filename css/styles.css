@@ -2,52 +2,6 @@ body {
   width: 100%;
 }
 
-header {
-  height: 80px;
-  width: 100vw;
-  display: flex;
-  align-items: center;
-}
-header #header-container {
-  padding: 0 32px 0 32px;
-  margin: 0 auto;
-  width: 100%;
-}
-
-header nav {
-  height: 100%;
-  display: flex;
-  flex-direction: row;
-}
-
-h4 {
-  color: #007bff;
-}
-
-.form {
-  padding-top: 2rem;
-  width: 30%;
-  margin: 0 auto;
-}
-.form input {
-  width: 100%;
-}
-.form select {
-  width: 100%;
-  margin-bottom: 0.5rem;
-}
-.form textarea {
-  width: 100%;
-}
-.form #button {
-  width: 100%;
-}
-
-.navbar {
-  display: flex;
-  justify-content: space-between;
-}
-
 #login-btn, #signup-btn {
   background-color: #007bff;
   color: #fff;
