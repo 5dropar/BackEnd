@@ -29,9 +29,31 @@ button.onclick = () => {
         description: currentDescription,
         date: currentDate,
         imgInfo: description,
-        userId: userId // Get the user id of whoever is upploading the image for later reference
+        userId: userId, // Get the user id of whoever is upploading the image for later reference
+        imageId: randomId() // Allar myndir eru með unique id þannig að auðveldara er að ná í eina mynd til þess að vinna með seinna
       });
   });
+};
+
+// Function sem ég fann á netinu sem gefur random unique id
+randomId = () => {
+  var S4 = function() {
+    return (((1 + Math.random()) * 0x10000) | 0).toString(16).substring(1);
+  };
+  return (
+    S4() +
+    S4() +
+    "-" +
+    S4() +
+    "-" +
+    S4() +
+    "-" +
+    S4() +
+    "-" +
+    S4() +
+    S4() +
+    S4()
+  );
 };
 
 getInfo = url => {
