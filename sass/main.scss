@@ -68,6 +68,7 @@ header {
     width: 100%;
   }
   label {
+    margin-top: 16px;
   }
   select {
     width: 100%;
@@ -78,6 +79,29 @@ header {
   }
   #button {
     width: 100%;
+  }
+  #title{
+    border: 1px solid $primary-color;
+    border-radius: 5px;
+    padding-left: 10px;
+    height: 30px;
+  }
+  #img-url{
+    border: 1px solid $primary-color;
+    border-radius: 5px;
+    padding-left: 10px;
+    height: 30px;
+
+  }
+  #rating{
+    border: 1px solid $primary-color;
+    border-radius: 5px;
+    padding-left: 10px;
+    height: 30px;
+
+  }
+  #description{
+    padding-left: 10px;
   }
 }
 .navbar {
