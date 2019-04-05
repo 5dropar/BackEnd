@@ -22,7 +22,7 @@ header #navbarSupportedContent ul {
   text-align: center;
   color: #007bff;
   width: 300px;
-  margin: 0 auto;
+  margin: 40px auto;
 }
 #account-container #account-btns {
   display: flex;
@@ -43,7 +43,7 @@ header #navbarSupportedContent ul {
 }
 #account-container #login-btn:hover,
 #account-container #signup-btn:hover {
-  background-color: #006adb;
+  background-color: #0161c7;
   color: #fff;
   height: 40px;
   width: 160px;
@@ -55,15 +55,11 @@ header #navbarSupportedContent ul {
 }
 
 .form {
-  padding-top: 2rem;
   width: 30%;
   margin: 0 auto;
 }
 .form input {
   width: 100%;
-}
-.form label {
-  margin-top: 16px;
 }
 .form select {
   width: 100%;
