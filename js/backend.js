@@ -12,7 +12,8 @@ const db = firebase.firestore(); // Reference við firebase.firestore() þannig 
 
 const button = document.getElementById("button");
 let userId; // Global variable til þess að geta náð í userid utan auth, breyta seinna
-button.onclick = () => {
+button.onclick = e => {
+  e.preventDefault();
   let currentTitle = document.getElementById("title").value;
   let currentUrl = document.getElementById("img-url").value;
   let currentRating = parseInt(document.getElementById("rating").value);
@@ -32,6 +33,13 @@ button.onclick = () => {
         microDescription: description.captions[0],
         userId: userId, // Get the user id of whoever is upploading the image for later reference
         imageId: randomId() // Allar myndir eru með unique id þannig að auðveldara er að ná í eina mynd til þess að vinna með seinna
+      })
+      .then(() => {
+        alert("You have successfully added an image!");
+        document.querySelector(".form").reset();
+      })
+      .catch(err => {
+        alert(err.message);
       });
   });
 };
