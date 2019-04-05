@@ -1,5 +1,5 @@
 $primary-color: #007bff;
-$hover-color: #006adb;
+$hover-color: #0161c7;
 $white: #fff;
 
 body {
@@ -27,8 +27,7 @@ header {
   text-align: center;
   color: $primary-color;
   width: 300px;
-
-  margin: 0 auto;
+  margin: 80px auto;
 
   #account-btns {
     display: flex;
@@ -66,8 +65,6 @@ header {
   margin: 0 auto;
   input {
     width: 100%;
-  }
-  label {
   }
   select {
     width: 100%;
