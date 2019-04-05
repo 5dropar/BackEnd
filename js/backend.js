@@ -37,9 +37,6 @@ button.onclick = e => {
       .then(() => {
         alert("You have successfully added an image!");
         document.querySelector(".form").reset();
-      })
-      .catch(err => {
-        alert(err.message);
       });
   });
 };
@@ -69,8 +66,11 @@ getInfo = url => {
   return fetch("http://localhost:3000/api?img=" + url)
     .then(results => results.json())
     .then(json => {
-      console.log(json);
-      return json.description;
+      if (json.description) {
+        return json.description;
+      } else {
+        alert("Error: " + json.message);
+      }
     });
 };
 
