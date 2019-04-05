@@ -102,13 +102,16 @@ logOutButton.onclick = () => {
 const logInLinks = document.querySelectorAll(".logged-out"); // Ná í alla links sem á að sýna þegar notandinn er loggaðurr inn
 const logOutLinks = document.querySelectorAll(".logged-in"); // Ná í alla links sem á að sýna þegar notandinn er ekki loggaðurr inn
 
+const btnHolder = document.querySelector("#account-btns"); // ná í account buttons til að fela þá þegar user er logged in
+
 // Þetta function runner alltaf þegar að það er auth change t.d þegar user loggar sig inn eða út eða þegar siða er fyrst oppnuð
 auth.onAuthStateChanged(user => {
   const form = document.querySelector(".form");
 
   if (user) {
     userId = user.uid;
-
+    btnHolder.style.display = "none";
+    form.style.display = "block";
     logInLinks.forEach(logInLink => {
       logInLink.style.display = "none";
     });
@@ -116,6 +119,7 @@ auth.onAuthStateChanged(user => {
       logOutLink.style.display = "block";
     });
   } else {
+    btnHolder.style.display = "block";
     form.style.display = "none";
     logOutLinks.forEach(logOutLink => {
       logOutLink.style.display = "none";
