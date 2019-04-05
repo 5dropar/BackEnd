@@ -1,6 +1,6 @@
-# BackEnd
+# The image database
 
-## A step by step series to get started adding to the image database!
+## A step by step series to join TID!
 
 # Prerequisites
 You will need to have Node.js on your machine and this document will assume that you have yarn (npm should be ok too). To install yarn do:
