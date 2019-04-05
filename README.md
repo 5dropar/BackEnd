@@ -5,7 +5,7 @@
 # Prerequisites
 You will need to have Node.js on your machine and this document will assume that you have yarn (npm should be ok too). To install yarn do:
 npm install -g yarn
-you will also need to have jest (https://jestjs.io/docs/en/getting-started). To install it just run the yarn command in the terminal in your project directory with no arguments like so:
+To install it just run the yarn command in the terminal in your project directory with no arguments like so:
 
 ```
 yarn
