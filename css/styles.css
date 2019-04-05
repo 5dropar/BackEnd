@@ -9,12 +9,20 @@ header nav {
 }
 header h4 {
   padding-left: 20px;
+  color: #fff;
+}
+header a:hover {
+  text-decoration: none;
 }
 header #navbarSupportedContent {
   width: 90px;
 }
 header #navbarSupportedContent ul {
   margin: 0;
+}
+header .navbar {
+  display: flex;
+  justify-content: space-between;
 }
 
 #container {
@@ -99,11 +107,6 @@ header #navbarSupportedContent ul {
 }
 .form #description {
   padding-left: 10px;
-}
-
-.navbar {
-  display: flex;
-  justify-content: space-between;
 }
 
 @media (max-width: 800px) {
