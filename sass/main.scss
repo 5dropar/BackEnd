@@ -4,8 +4,16 @@ $white: #fff;
 
 body {
   width: 100%;
+  font-family: "Poppins", sans-serif;
 }
 header {
+  nav {
+    height: 80px;
+    width: 100vw;
+  }
+  h4 {
+    padding-left: 20px;
+  }
   #navbarSupportedContent {
     width: 90px;
     ul {
