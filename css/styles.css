@@ -6,30 +6,17 @@ header nav {
   height: 80px;
   width: 100vw; }
 header h4 {
-<<<<<<< HEAD
-  padding-left: 20px; }
+  padding-left: 20px;
+  color: #fff; }
+header a:hover {
+  text-decoration: none; }
 header #navbarSupportedContent {
   width: 90px; }
   header #navbarSupportedContent ul {
     margin: 0; }
-=======
-  padding-left: 20px;
-  color: #fff;
-}
-header a:hover {
-  text-decoration: none;
-}
-header #navbarSupportedContent {
-  width: 90px;
-}
-header #navbarSupportedContent ul {
-  margin: 0;
-}
 header .navbar {
   display: flex;
-  justify-content: space-between;
-}
->>>>>>> 02b0dead4780e432ef5c5bdcbea45f0f1de3533f
+  justify-content: space-between; }
 
 #container {
   width: 100%;
@@ -101,13 +88,6 @@ header .navbar {
   .form #description {
     padding-left: 10px; }
 
-<<<<<<< HEAD
-.navbar {
-  display: flex;
-  justify-content: space-between; }
-
-=======
->>>>>>> 02b0dead4780e432ef5c5bdcbea45f0f1de3533f
 @media (max-width: 800px) {
   .form {
     width: 80%; } }
