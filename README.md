@@ -21,10 +21,16 @@ First you have to clone or download the BackEnd repository. Then you open the pr
 node index.js
 ```
 
-Then is should say "Example app listening on port 3000!" - Now you have started the backend server
+The terminal should say "Example app listening on port 3000!" - Now you have started the backend server
 
 Open index.html in /Fimmdropar/BackEnd/ ,sign up and start adding to the growing database of pictures!
 
-## The front end 
+## Exploring the database (the front end)
 To access the front end of the database you have to clone or download the FrontEnd repository. Once you have done that open index.html in your 
 browser and start surfing through the incredibly wast ocean of pictures!
+
+
+
+
+## Troubleshooting
+If theRealBackend is not replying "Example app listening on port 3000!" try writing yarn in to the terminal and try again.
