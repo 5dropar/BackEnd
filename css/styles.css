@@ -64,4 +64,8 @@ header #navbarSupportedContent {
   display: flex;
   justify-content: space-between; }
 
+@media (max-width: 800px) {
+  .form {
+    width: 80%; } }
+
 /*# sourceMappingURL=styles.css.map */
