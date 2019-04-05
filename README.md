@@ -15,7 +15,7 @@ yarn
 ## How to contribute to the image database
 
 First you have to clone or download the BackEnd repository. Then you open the project in your code editor go to:
-/Fimmdropar/BackEnd/therealbackend, in your terminal. Once you are there write:
+/BackEnd/theRealBackEnd, in your terminal. Once you are there write:
 
 ```
 node index.js
@@ -23,7 +23,7 @@ node index.js
 
 The terminal should say "Example app listening on port 3000!" - Now you have started the backend server
 
-Open index.html in /Fimmdropar/BackEnd/ ,sign up and start adding to the growing database of pictures!
+Open index.html in /BackEnd/ ,sign up and start adding to the growing database of pictures!
 
 ## Exploring the database (the front end)
 To access the front end of the database you have to clone or download the FrontEnd repository. Once you have done that open index.html in your 
