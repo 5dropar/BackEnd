@@ -11,16 +11,14 @@ you will also need to have jest (https://jestjs.io/docs/en/getting-started). To 
 yarn
 ```
 
-### Getting the backend going
-Fork the backend repository and
 
-## How to contribute to the project
+## How to contribute to the image database
 
 First you have to clone or download the BackEnd repository. Then you open the project in your code editor go to:
 /Fimmdropar/BackEnd/therealbackend, in your terminal. Once you are there write:
 
 ```
-npm index.js
+node index.js
 ```
 
 Then is should say "Example app listening on port 3000!" - Now you have started the backend server
